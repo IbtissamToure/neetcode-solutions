@@ -1,0 +1,8 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen = set() #created a hash set to store the list and iterate through
+        for i in nums:
+            if i in seen:
+                return True
+            seen.add(i) # add instead of append bacause we are adding to the hash set
+        return False
